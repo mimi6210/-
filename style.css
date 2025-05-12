@@ -1,0 +1,168 @@
+body {
+  font-family: "Yu Gothic", sans-serif;
+  background-image: linear-gradient(to bottom right, #ffe6f0, #e0f0ff);
+  color: #5c4b51;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* === ヘッダー === */
+header {
+  background: url("../images/header_bg.jpeg") no-repeat center/cover;
+  padding: 3em 1em;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Segoe Script', 'Yu Mincho', cursive;
+  color: #e75480;
+  text-shadow: 1px 1px 3px #fff;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+/* === ナビゲーション === */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 0 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: #ec4899;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(236, 72, 153, 0.3);
+}
+
+nav a:hover {
+  background-color: #be185d;
+  transform: scale(1.05);
+}
+
+/* === メインエリア === */
+main {
+  padding: 2em;
+}
+
+section {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: #fffafc;
+  border: 1px solid #f8cde0;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #d36ba4;
+  border-bottom: 2px dashed #f8cde0;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+  font-family: "Yu Mincho", serif;
+}
+
+img {
+  border-radius: 50%;
+  display: block;
+  margin: 1em auto;
+}
+
+.image-row {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-row img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(248, 175, 201, 0.5);
+}
+
+/* === ボタン系 === */
+button {
+  margin: 0.5em;
+}
+
+.btn-miyo {
+  background-color: #ffcde0;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-miyo:hover {
+  background-color: #ffbad6;
+  transform: scale(1.03);
+}
+
+.glow-button {
+  background-color: #f3d5e6;
+  color: #5c4b51;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.glow-button:active {
+  box-shadow: 0 0 12px #ff9ecf, 0 0 24px #ffbde5;
+  transform: scale(0.98);
+}
+
+/* === フッター === */
+footer {
+  background: linear-gradient(to right, #f9a8d4, #fbcfe8);
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* === スマホ対応 === */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+@keyframes shimmer {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+body.shimmer {
+  background: linear-gradient(45deg, #ffb6c1, #ffe6f0, #ffb6c1);
+  background-size: 400% 400%;
+  animation: shimmer 6s infinite alternate;
+}
